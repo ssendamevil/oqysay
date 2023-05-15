@@ -47,7 +47,11 @@ class HomeScreen extends StatelessWidget {
                 ],
               );
             }
-            return const Text("Books were loaded!");
+            return Column(
+              children: [
+                BookShelf(books: state.books),
+              ],
+            );
           },
         ),
       ),

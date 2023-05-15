@@ -4,7 +4,7 @@ import '../../domain/models/book.dart';
 
 class BookNetworkProvider {
   final Dio _dio = Dio(BaseOptions(
-    baseUrl: 'http://localhost:8000/api/'
+    baseUrl: 'http://10.0.2.2:8000/api/'
   ));
 
   BookNetworkProvider();
@@ -20,8 +20,8 @@ class BookNetworkProvider {
         .map((json) =>
             Book(
                 title: json['name'],
-                image: json['image'][0],
-                authorName: json['author']
+                image: json['image'] == null ? "" : json['image'][0].toString(),
+                authorName: json['auhtor'] == null ? "" : json['author'][0].toString()
             )
         ).toList();
   }

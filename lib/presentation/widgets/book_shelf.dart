@@ -1,8 +1,11 @@
 import 'package:binderbee/presentation/widgets/book_shelf_item.dart';
 import 'package:flutter/material.dart';
 
+import '../../domain/models/book.dart';
+
 class BookShelf extends StatelessWidget {
-  const BookShelf({Key? key}) : super(key: key);
+  const BookShelf({Key? key, required this.books}) : super(key: key);
+  final List<Book> books;
 
   @override
   Widget build(BuildContext context) {
@@ -46,13 +49,13 @@ class BookShelf extends StatelessWidget {
             height: 230,
             child: ListView.separated(
               scrollDirection: Axis.horizontal,
-              itemBuilder: (context, position) {
-                return const BookShelfItem();
+              itemBuilder: (context, int index) {
+                return BookShelfItem(image: books[index].image, title: books[index].title,);
               },
               separatorBuilder: (BuildContext context, int index) {
                 return const SizedBox(width: 30,);
               },
-              itemCount: 8,
+              itemCount: books.length,
             ),
           ),
         ],

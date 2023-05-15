@@ -16,14 +16,12 @@ class StoreBloc extends Bloc<StoreEvent, StoreState> {
   Future<void> _onGetAllBooks(StoreGetAllBooksEvent event, Emitter<StoreState> emit) async {
     try{
       emit(state.copyWith(booksStatus: StoreRequest.inProgress));
-      print("object");
       final books = await _bookRepository.getAllBooks();
 
       emit(state.copyWith(booksStatus: StoreRequest.successRequest, books: books));
     } on DioError catch (e){
       emit(state.copyWith(
         booksStatus: StoreRequest.failureRequest,
-        failureMessage: e.response!.data['msg'],
       ));
     }
   }
