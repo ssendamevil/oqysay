@@ -3,14 +3,12 @@ import 'package:dio/dio.dart';
 import '../../domain/models/book.dart';
 
 class BookNetworkProvider {
-  final Dio _dio = Dio(BaseOptions(
-    baseUrl: 'http://10.0.2.2:8000/api/'
-  ));
+  final Dio _dio;
 
-  BookNetworkProvider();
+  BookNetworkProvider(this._dio);
 
   Future<List<Book>> getAllBooks() async{
-    var response = await _dio.get('books');
+    var response = await _dio.get('api/books/');
 
     return _parseBook(response.data);
   }

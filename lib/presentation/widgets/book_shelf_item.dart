@@ -20,7 +20,7 @@ class BookShelfItem extends StatelessWidget {
           ),
           child: Image.network(image, fit: BoxFit.cover,),
         ),
-        Text(title),
+        Text("title"),
         Text("Author"),
         Text("2400₸")
       ],

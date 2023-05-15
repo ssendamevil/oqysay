@@ -117,7 +117,7 @@ class _LoginViewState extends State<LoginView> {
                         ),
                         filled: true,
                         fillColor: const Color(0xFFECE9E9),
-                        contentPadding: EdgeInsets.only(
+                        contentPadding: const EdgeInsets.only(
                             left: 25.0, right: 5.0, top: 15.0, bottom: 15.0)),
                   ),
                 ),

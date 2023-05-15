@@ -1,37 +1,37 @@
-import 'package:binderbee/presentation/bloc/store/store_bloc.dart';
-import 'package:binderbee/presentation/bloc/store/store_event.dart';
-import 'package:binderbee/presentation/bloc/store/store_state.dart';
-import 'package:binderbee/presentation/widgets/book_shelf.dart';
-import 'package:binderbee/presentation/widgets/carousel_loading.dart';
-import 'package:binderbee/presentation/widgets/search_appbar.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
-class HomeScreen extends StatelessWidget {
-  const HomeScreen({Key? key}) : super(key: key);
+import '../bloc/store/store_bloc.dart';
+import '../bloc/store/store_event.dart';
+import '../bloc/store/store_state.dart';
+import '../widgets/book_shelf.dart';
+import '../widgets/search_appbar.dart';
+
+class HomePage extends StatelessWidget {
+  const HomePage({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return const HomeScreenView();
+    return const HomePageView();
   }
 }
 
-class HomeScreenView extends StatefulWidget {
-  const HomeScreenView({Key? key}) : super(key: key);
+class HomePageView extends StatefulWidget {
+  const HomePageView({Key? key}) : super(key: key);
 
   @override
-  State<HomeScreenView> createState() => _HomeScreenViewState();
+  State<HomePageView> createState() => _HomePageViewState();
 }
 
-class _HomeScreenViewState extends State<HomeScreenView> {
+class _HomePageViewState extends State<HomePageView> {
   late StoreBloc _bloc;
 
   @override
   void initState() {
+    // TODO: implement initState
     super.initState();
     _bloc = context.read<StoreBloc>()..add(StoreGetAllBooksEvent());
   }
-
 
   @override
   Widget build(BuildContext context) {
@@ -72,8 +72,6 @@ class _HomeScreenViewState extends State<HomeScreenView> {
             }
             return Column(
               children: [
-                CarouselLoading(),
-                SizedBox(height: 50,),
                 BookShelf(books: state.books),
                 BookShelf(books: state.books),
               ],

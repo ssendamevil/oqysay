@@ -1,3 +1,4 @@
+import 'package:binderbee/presentation/pages/home_page.dart';
 import 'package:binderbee/presentation/pages/main_page.dart';
 import 'package:binderbee/presentation/screens/account_screen.dart';
 import 'package:binderbee/presentation/screens/cart_screen.dart';

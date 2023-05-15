@@ -7,7 +7,7 @@ import 'package:dio/dio.dart';
 class DataBookRepository extends BookRepository{
   final BookNetworkProvider _bookNetworkProvider;
 
-  DataBookRepository() : _bookNetworkProvider = BookNetworkProvider();
+  DataBookRepository(Dio dio) : _bookNetworkProvider = BookNetworkProvider(dio);
 
 
   @override

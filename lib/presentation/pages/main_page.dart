@@ -1,8 +1,6 @@
-import 'package:binderbee/data/repositories/data_book_repository.dart';
 import 'package:binderbee/domain/repositories/book_repository.dart';
 import 'package:binderbee/presentation/bloc/store/store_bloc.dart';
 import 'package:binderbee/presentation/providers/navbar_provider.dart';
-import 'package:binderbee/presentation/widgets/navigation_bar.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:provider/provider.dart';
@@ -12,16 +10,16 @@ class MainPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return RepositoryProvider<BookRepository>(
-      create: (context) => DataBookRepository(),
-      child: MultiBlocProvider(
-          providers: [
-            BlocProvider<StoreBloc>(
-                create: (context) => StoreBloc(context.read<BookRepository>() )
-            )
-          ],
-          child: const MainViewPage()
-      ),
+    return MultiBlocProvider(
+        providers: [
+          BlocProvider<StoreBloc>(
+              create: (context) => StoreBloc(context.read<BookRepository>() )
+          )
+        ],
+        child: ChangeNotifierProvider<NavbarProvider>(
+          create: (_)=> NavbarProvider(),
+          child: const MainViewPage(),
+        )
     );
   }
 }
