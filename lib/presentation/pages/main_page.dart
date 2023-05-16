@@ -5,6 +5,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:provider/provider.dart';
 
+import '../bloc/store/store_event.dart';
+
 class MainPage extends StatelessWidget {
   const MainPage({Key? key}) : super(key: key);
 
@@ -32,6 +34,13 @@ class MainViewPage extends StatefulWidget {
 }
 
 class _MainViewPageState extends State<MainViewPage> {
+  late StoreBloc _storeBloc;
+
+  @override
+  void initState() {
+    super.initState();
+    _storeBloc = context.read<StoreBloc>()..add(StoreGetAllBooksEvent());
+  }
 
   @override
   Widget build(BuildContext context) {

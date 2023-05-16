@@ -4,7 +4,7 @@ enum StoreRequest{
   unknown,
   inProgress,
   successRequest,
-  failureRequest
+  failureRequest,
 }
 
 class StoreState {

@@ -1,3 +1,4 @@
+import 'package:binderbee/presentation/pages/product_page.dart';
 import 'package:flutter/material.dart';
 import 'package:shimmer_animation/shimmer_animation.dart';
 
@@ -8,22 +9,26 @@ class BookShelfItem extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      crossAxisAlignment: CrossAxisAlignment.start,
-      children: [
-        Container(
-          width: 130,
-          height: 180,
-          decoration: const BoxDecoration(
-            borderRadius: BorderRadius.all(Radius.circular(10)),
-            color: Colors.grey,
+    return OutlinedButton(
+      onPressed: () {
+        Navigator.of(context).push(MaterialPageRoute(builder: (context) => ProductPage()));
+      },
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          SizedBox(
+            width: 125,
+            height: 180,
+            child: ClipRRect(
+              borderRadius: const BorderRadius.all(Radius.circular(10)),
+                child: Image.network(image, fit: BoxFit.cover,)
+            ),
           ),
-          child: Image.network(image, fit: BoxFit.cover,),
-        ),
-        Text("title"),
-        Text("Author"),
-        Text("2400₸")
-      ],
+          Text("title"),
+          Text("Author"),
+          Text("2400₸")
+        ],
+      ),
     );
   }
 }

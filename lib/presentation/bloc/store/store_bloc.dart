@@ -17,9 +17,8 @@ class StoreBloc extends Bloc<StoreEvent, StoreState> {
     try{
       emit(state.copyWith(booksStatus: StoreRequest.inProgress));
       final books = await _bookRepository.getAllBooks();
-
       emit(state.copyWith(booksStatus: StoreRequest.successRequest, books: books));
-    } on DioError catch (e){
+    } catch (e){
       emit(state.copyWith(
         booksStatus: StoreRequest.failureRequest,
       ));
