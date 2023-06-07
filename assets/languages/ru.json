@@ -1,0 +1,10 @@
+{
+  "btn_login": "Войти",
+  "btn_register": "Регистрация",
+  "btn_guest": "Войдите как гость",
+  "email": "Email",
+  "password": "Пароль",
+  "or": "или",
+  "forgot_password": "Забыли пароль?",
+  "settings_language": "Язык"
+}

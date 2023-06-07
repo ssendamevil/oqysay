@@ -1,0 +1,10 @@
+{
+  "btn_login": "Login",
+  "btn_register": "Sign Up",
+  "btn_guest": "Enter as Guest",
+  "email": "Email",
+  "password": "Password",
+  "or": "or",
+  "forgot_password": "Forgot password?",
+  "settings_language": "Language"
+}

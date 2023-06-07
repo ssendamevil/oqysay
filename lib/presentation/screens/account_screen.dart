@@ -1,5 +1,6 @@
 import 'package:binderbee/data/datasources/box_helper.dart';
 import 'package:binderbee/presentation/pages/login_page.dart';
+import 'package:binderbee/presentation/pages/settings_page.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
@@ -185,6 +186,33 @@ class AccountScreen extends StatelessWidget {
                         ],
                       ),
                     )
+                ),
+                const SizedBox(height: 10,),
+                ElevatedButton(
+                  onPressed: () {
+                    Navigator.of(context).push(MaterialPageRoute(
+                      builder: (context) => const SettingsPage(),
+                    ));
+                  },
+                  style: const ButtonStyle(
+                    backgroundColor: MaterialStatePropertyAll(Color(0xFFF0F0F0)),
+                    shadowColor: MaterialStatePropertyAll(Colors.transparent),
+                  ),
+                  child: Row(
+                    children: const [
+                      Icon(Icons.all_inbox),
+                      SizedBox(width: 50,),
+                      Text("Settings",
+                        style: TextStyle(
+                            fontFamily: "Montserrat",
+                            fontSize: 18,
+                            fontWeight: FontWeight.w500
+                        ),
+                      ),
+                      SizedBox(width: 165,),
+                      Icon(Icons.arrow_forward_ios)
+                    ],
+                  ),
                 ),
                 const SizedBox(height: 30,),
                 SizedBox(

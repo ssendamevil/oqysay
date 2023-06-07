@@ -83,17 +83,9 @@ class _AppViewState extends State<AppView> {
         return ChangeNotifierProvider<NavbarProvider>(
           create: (_) => NavbarProvider(),
           child: MaterialApp(
-            localizationsDelegates: [
-              AppLocalization.delegate,
-              GlobalMaterialLocalizations.delegate,
-              GlobalWidgetsLocalizations.delegate,
-              GlobalCupertinoLocalizations.delegate,
-            ],
-            supportedLocales: [
-              Locale('en', 'US'),
-              Locale('ru', 'RU'),
-              Locale('kz', 'KZ'),
-            ],
+            localizationsDelegates: AppLocalization.localizationsDelegate,
+            supportedLocales: AppLocalization.supportedLocales,
+            localeResolutionCallback: AppLocalization.localeResolutionCallBack,
             debugShowCheckedModeBanner: false,
             theme: ThemeData(
                 primarySwatch: Colors.lightBlue,
@@ -108,6 +100,10 @@ class _AppViewState extends State<AppView> {
               splashTransition: SplashTransition.fadeTransition,
               nextScreen: _getFirstPage(),
             ),
+            darkTheme: ThemeData(
+              brightness: Brightness.dark
+            ),
+            themeMode: ThemeMode.light,
           ),
         );
       },

@@ -72,6 +72,7 @@ dev_dependencies:
 
 # The following section is specific to Flutter packages.
 flutter:
+  generate: true
 
   # The following line ensures that the Material Icons font is
   # included with your application, so that you can use the icons in
@@ -82,9 +83,7 @@ flutter:
   assets:
     - assets/images/
     - assets/logo/
-    - assets/languages/en_US.json
-    - assets/languages/kz_KZ.json
-    - assets/languages/ru_RU.json
+    - assets/languages/
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
 

@@ -84,7 +84,7 @@ class _LoginViewState extends State<LoginView> {
                       }
                     }),
                     decoration: InputDecoration(
-                        hintText: 'Username/Email',
+                        hintText: '${AppLocalization.of(context).getTranslatedValues("email")}',
                         hintStyle: const TextStyle(
                           fontFamily: 'Montserrat',
                           fontSize: 16,
@@ -127,7 +127,7 @@ class _LoginViewState extends State<LoginView> {
                     }),
                     obscureText: true,
                     decoration: InputDecoration(
-                        hintText: 'Password',
+                        hintText: '${AppLocalization.of(context).getTranslatedValues("password")}',
                         hintStyle: const TextStyle(
                           fontFamily: 'Montserrat',
                           fontSize: 16,
@@ -157,13 +157,13 @@ class _LoginViewState extends State<LoginView> {
                 const SizedBox(
                   height: 30,
                 ),
-                const SizedBox(
+                SizedBox(
                   width: 335,
                   child: Align(
                     alignment: Alignment.centerRight,
                     child: Text(
-                      "Forgot password?",
-                      style: TextStyle(
+                      '${AppLocalization.of(context).getTranslatedValues("forgot_password")}',
+                      style: const TextStyle(
                           fontFamily: 'Montserrat',
                           fontWeight: FontWeight.w500,
                           fontSize: 16),
@@ -179,8 +179,8 @@ class _LoginViewState extends State<LoginView> {
                   child: Container(),
                 ),
                 const SizedBox(height: 20,),
-                const Text('or',
-                  style: TextStyle(
+                Text('${AppLocalization.of(context).getTranslatedValues("or")}',
+                  style: const TextStyle(
                     fontFamily: "Montserrat",
                     fontSize: 15,
                     color: Color(0xFF223263),
@@ -193,9 +193,9 @@ class _LoginViewState extends State<LoginView> {
                         builder: (context) => const MainPage(),
                       ));
                     },
-                    child: const Text(
-                      "Enter as Guest",
-                      style: TextStyle(
+                    child: Text(
+                      '${AppLocalization.of(context).getTranslatedValues("btn_guest")}',
+                      style: const TextStyle(
                         fontFamily: "Montserrat",
                         fontSize: 16,
                         color: Color(0xFF223263),
@@ -235,9 +235,9 @@ class _LoginViewState extends State<LoginView> {
                         ),
                         elevation: 0,
                         primary: Colors.transparent),
-                    child: const Text(
-                      "Register",
-                      style: TextStyle(
+                    child: Text(
+                      '${AppLocalization.of(context).getTranslatedValues("btn_register")}',
+                      style: const TextStyle(
                           fontFamily: 'Montserrat',
                           fontWeight: FontWeight.w500,
                           fontSize: 16,
