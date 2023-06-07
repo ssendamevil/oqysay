@@ -6,5 +6,60 @@
   "password": "Пароль",
   "or": "или",
   "forgot_password": "Забыли пароль?",
-  "settings_language": "Язык"
+  "settings_language": "Язык",
+  "search_for_a_book": "Искать книгу...",
+  "100_top_bestsellers": "100 Топ Бестселлеров",
+  "see_all": "посмотреть все",
+  "availability": "Доступность",
+  "in_stock_online": "В наличии онлайн",
+  "buy_online_pick_up_in_store": "Купить онлайн, Забрать в магазине",
+  "overview": "Описание",
+  "product_details": "Детали Продукта",
+  "publisher": "Издатель:",
+  "publication_date": "Дата Публикации:",
+  "pages": "Страницы:",
+  "sales_rank": "Рейтинг Продаж:",
+  "product_dimensions": "Размеры Продукта:",
+  "language": "Язык:",
+  "add_to_cart": "ДОБАВИТЬ В КОРЗИНУ",
+  "2_reviews": "2 Отзыва",
+  "categories": "Категории",
+  "cart": "Корзина",
+  "no_items": "Товаров нет",
+  "there_is_no_products": "В корзине нет товаров!",
+  "edit_profile": "Изменить Профиль",
+  "account": "Аккаунт",
+  "my_orders": "Мои Заказы",
+  "my_reviews": "Мои Отзывы",
+  "shipping_address": "Адрес Доставки",
+  "notifications": "Уведомления",
+  "settings": "Настройки",
+  "logout": "Выйти",
+  "switch_to_russian": "Перейти на Русский",
+  "switch_to_kazakh": "Перейти на Казахский",
+  "switch_to_english": "Перейти на Ангийский"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 }

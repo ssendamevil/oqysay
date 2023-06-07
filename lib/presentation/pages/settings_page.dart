@@ -19,9 +19,9 @@ class _SettingsPageState extends State<SettingsPage> {
         child: Column(
           children: [
             Text('${AppLocalization.of(context).getTranslatedValues("settings_language")}'),
-            ElevatedButton(onPressed: () => context.read<LanguageBloc>().add(LoadLanguageEvent(locale: Locale('ru', 'RU'))), child: Text("Switch to Russian")),
-            ElevatedButton(onPressed: () => context.read<LanguageBloc>().add(LoadLanguageEvent(locale: Locale('kk', 'KZ'))), child: Text("Switch to Kazakh")),
-            ElevatedButton(onPressed: () => context.read<LanguageBloc>().add(LoadLanguageEvent(locale: Locale('en', 'US'))), child: Text("Switch to English")),
+            ElevatedButton(onPressed: () => context.read<LanguageBloc>().add(LoadLanguageEvent(locale: Locale('ru', 'RU'))), child: Text('${AppLocalization.of(context).getTranslatedValues("switch_to_russian")}')),
+            ElevatedButton(onPressed: () => context.read<LanguageBloc>().add(LoadLanguageEvent(locale: Locale('kk', 'KZ'))), child: Text('${AppLocalization.of(context).getTranslatedValues("switch_to_kazakh")}')),
+            ElevatedButton(onPressed: () => context.read<LanguageBloc>().add(LoadLanguageEvent(locale: Locale('en', 'US'))), child: Text('${AppLocalization.of(context).getTranslatedValues("switch_to_english")}')),
           ],
         ),
       ),

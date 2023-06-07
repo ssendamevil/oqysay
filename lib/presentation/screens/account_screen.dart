@@ -5,6 +5,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 import '../bloc/auth/auth_bloc.dart';
+import '../language_selection/app_localization.dart';
 
 class AccountScreen extends StatelessWidget {
   const AccountScreen({Key? key}) : super(key: key);
@@ -16,9 +17,9 @@ class AccountScreen extends StatelessWidget {
         automaticallyImplyLeading: false,
         title: Row(
           mainAxisAlignment: MainAxisAlignment.center,
-          children: const [
+          children:  [
             Text(
-              "Account",
+              '${AppLocalization.of(context).getTranslatedValues("account")}',
               style: TextStyle(
                 fontSize: 20,
                 fontFamily: 'Montserrat',
@@ -70,8 +71,8 @@ class AccountScreen extends StatelessWidget {
                                     fontWeight: FontWeight.w600
                                 ),
                               ),
-                              const Text(
-                                "Edit Profile",
+                               Text(
+                                '${AppLocalization.of(context).getTranslatedValues("edit_profile")}',
                                 style: TextStyle(
                                     fontWeight: FontWeight.w500,
                                     fontFamily: "Montserrat",
@@ -96,10 +97,11 @@ class AccountScreen extends StatelessWidget {
                     child: Padding(
                       padding: const EdgeInsets.symmetric(vertical: 20, horizontal: 20),
                       child: Row(
-                        children: const [
+                        children:  [
                           Icon(Icons.all_inbox),
                           SizedBox(width: 50,),
-                          Text("My Orders",
+                          Text(
+                            '${AppLocalization.of(context).getTranslatedValues("my_orders")}',
                             style: TextStyle(
                                 fontFamily: "Montserrat",
                                 fontSize: 18,
@@ -121,10 +123,11 @@ class AccountScreen extends StatelessWidget {
                     child: Padding(
                       padding: const EdgeInsets.symmetric(vertical: 20, horizontal: 20),
                       child: Row(
-                        children: const [
+                        children:  [
                           Icon(Icons.all_inbox),
                           SizedBox(width: 50,),
-                          Text("My Reviews",
+                          Text(
+                            '${AppLocalization.of(context).getTranslatedValues("my_reviews")}',
                             style: TextStyle(
                                 fontFamily: "Montserrat",
                                 fontSize: 18,
@@ -146,10 +149,11 @@ class AccountScreen extends StatelessWidget {
                     child: Padding(
                       padding: const EdgeInsets.symmetric(vertical: 20, horizontal: 20),
                       child: Row(
-                        children: const [
+                        children:  [
                           Icon(Icons.all_inbox),
                           SizedBox(width: 50,),
-                          Text("Shipping Address",
+                          Text(
+                            '${AppLocalization.of(context).getTranslatedValues("shipping_address")}',
                             style: TextStyle(
                                 fontFamily: "Montserrat",
                                 fontSize: 18,
@@ -171,10 +175,11 @@ class AccountScreen extends StatelessWidget {
                     child: Padding(
                       padding: const EdgeInsets.symmetric(vertical: 20, horizontal: 20),
                       child: Row(
-                        children: const [
+                        children:  [
                           Icon(Icons.all_inbox),
                           SizedBox(width: 50,),
-                          Text("Notifications",
+                          Text(
+                            '${AppLocalization.of(context).getTranslatedValues("notifications")}',
                             style: TextStyle(
                                 fontFamily: "Montserrat",
                                 fontSize: 18,
@@ -199,10 +204,11 @@ class AccountScreen extends StatelessWidget {
                     shadowColor: MaterialStatePropertyAll(Colors.transparent),
                   ),
                   child: Row(
-                    children: const [
+                    children:  [
                       Icon(Icons.all_inbox),
                       SizedBox(width: 50,),
-                      Text("Settings",
+                      Text(
+                        '${AppLocalization.of(context).getTranslatedValues("settings")}',
                         style: TextStyle(
                             fontFamily: "Montserrat",
                             fontSize: 18,
@@ -231,8 +237,8 @@ class AccountScreen extends StatelessWidget {
                             borderRadius: BorderRadius.zero
                         )
                     ),
-                    child: const Text(
-                      "Logout",
+                    child:  Text(
+                      '${AppLocalization.of(context).getTranslatedValues("logout")}',
                       style: TextStyle(
                           color: Colors.red,
                           fontSize: 16,

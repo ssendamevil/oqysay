@@ -1,3 +1,4 @@
+import 'package:binderbee/presentation/language_selection/app_localization.dart';
 import 'package:binderbee/presentation/widgets/book_shelf_item.dart';
 import 'package:flutter/material.dart';
 
@@ -16,8 +17,8 @@ class BookShelf extends StatelessWidget {
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              const Text(
-                "100 Top Bestsellers",
+               Text(
+                '${AppLocalization.of(context).getTranslatedValues("100_top_bestsellers")}',
                 style: TextStyle(
                   fontSize: 17,
                   fontFamily: "Monstserrat",
@@ -27,9 +28,9 @@ class BookShelf extends StatelessWidget {
               TextButton(
                 onPressed: (){},
                 child: Row(
-                  children: const [
+                  children: [
                     Text(
-                      "see all",
+                      '${AppLocalization.of(context).getTranslatedValues("see_all")}',
                       style: TextStyle(
                         fontFamily: "Montserrat",
                         fontSize: 14,

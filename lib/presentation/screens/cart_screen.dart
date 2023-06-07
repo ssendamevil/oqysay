@@ -3,6 +3,7 @@ import 'package:binderbee/presentation/bloc/cart/cart_state.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
+import '../language_selection/app_localization.dart';
 import '../widgets/cart_item.dart';
 
 class CartScreen extends StatelessWidget {
@@ -24,14 +25,16 @@ class CartScreen extends StatelessWidget {
             title: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                const Text("Cart", style: TextStyle(
+                 Text(
+                  '${AppLocalization.of(context).getTranslatedValues("cart")}',
+                  style: TextStyle(
                     fontSize: 20,
                     fontFamily: "Montserrat",
                     fontWeight: FontWeight.w600
                 ),),
                 (state.cartItems.isEmpty) ?
-                const Text(
-                  'No items',
+                 Text(
+                  '${AppLocalization.of(context).getTranslatedValues("no_items")}',
                   style: TextStyle(
                       fontFamily: "Lato",
                       fontSize: 16,
@@ -66,7 +69,9 @@ class CartScreen extends StatelessWidget {
           body: Padding(
               padding: const EdgeInsets.symmetric(horizontal: 10),
               child: state.cartItems.isEmpty ?
-                const Center(child: Text("There is no products in the cart!"))
+                 Center(child: Text(
+                  '${AppLocalization.of(context).getTranslatedValues("there_is_no_products")}'
+                ))
                     : ListView.separated(
                         scrollDirection: Axis.vertical,
                         itemBuilder: (context, int index) {

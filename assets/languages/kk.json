@@ -6,5 +6,49 @@
   "password": "Құпиясөз",
   "or": "немесе",
   "forgot_password": "Құпия сөзді ұмыттыңыз ба?",
-  "settings_language": "Тіл"
+  "settings_language": "Тіл",
+  "search_for_a_book": "Кітап іздеу...",
+  "100_top_bestsellers": "100 Топ Бестселлерлер",
+  "see_all": "арлығын көру",
+  "availability": "Қолжетімділік",
+  "in_stock_online": "Онлайн қоймада",
+  "buy_online_pick_up_in_store": "Онлайн сатып алу, Дүкеннен алу",
+  "overview": "Сипаттама",
+  "product_details": "Өнім туралы мәлімет",
+  "publisher": "Баспагер:",
+  "publication_date": "Шығарылу Күні:",
+  "pages": "Сату Рейтингі:",
+  "product_dimensions": "Өнімнің өлшемдері:",
+  "language": "Тіл:",
+  "add_to_cart": "КОРЗИНАҒА САЛУ",
+  "2_reviews": "2 Шолу",
+  "categories": "Категориялар",
+  "cart": "Корзина",
+  "no_items": "Тауарлар жоқ",
+  "there_is_no_products": "Корзинада тауарлар жоқ!",
+  "edit_profile": "Профильді өзгерту",
+  "account": "Аккаунт",
+  "my_orders": "Менің тапсырыстарым",
+  "my_reviews": "Менің Пікірлерім",
+  "shipping_address": "Жеткізу Мекенжайы",
+  "notifications": "Хабарламалар",
+  "settings": "Настройкалар",
+  "logout": "Шығу",
+  "switch_to_russian": "Орысша тілге ауысу",
+  "switch_to_kazakh": "Қазақша тілге ауысу",
+  "switch_to_english": "Ағылшынша тілге ауысу"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 }

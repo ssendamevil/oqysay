@@ -1,3 +1,4 @@
+import 'package:binderbee/presentation/language_selection/app_localization.dart';
 import 'package:flutter/material.dart';
 
 
@@ -17,7 +18,7 @@ class SearchAppbar extends StatelessWidget with PreferredSizeWidget {
               fontWeight: FontWeight.w400
           ),
           decoration: InputDecoration(
-              hintText: "Search for a book...",
+              hintText: '${AppLocalization.of(context).getTranslatedValues("search_for_a_book")}',
               suffixIcon: const Icon(Icons.search),
               hintStyle: const TextStyle(
                 fontFamily: 'Montserrat',

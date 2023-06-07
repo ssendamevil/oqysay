@@ -2,6 +2,8 @@ import 'package:binderbee/presentation/widgets/category_item.dart';
 import 'package:binderbee/presentation/widgets/search_appbar.dart';
 import 'package:flutter/material.dart';
 
+import '../language_selection/app_localization.dart';
+
 class CategoryScreen extends StatelessWidget {
   const CategoryScreen({Key? key}) : super(key: key);
 
@@ -16,7 +18,7 @@ class CategoryScreen extends StatelessWidget {
             Align(
               alignment: Alignment.centerLeft,
               child: Text(
-                "Categories",
+                '${AppLocalization.of(context).getTranslatedValues("categories")}',
                 style: TextStyle(
                   fontSize: 20,
                   fontFamily: "Montserrat",

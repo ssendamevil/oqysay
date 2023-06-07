@@ -7,6 +7,7 @@ import '../../domain/models/book.dart';
 import '../bloc/cart/cart_bloc.dart';
 import '../bloc/cart/cart_event.dart';
 import '../bloc/cart/cart_state.dart';
+import '../language_selection/app_localization.dart';
 import '../providers/navbar_provider.dart';
 
 class ProductPage extends StatelessWidget {
@@ -100,7 +101,9 @@ class _ProductPageViewState extends State<ProductPageView> {
               ],
             ),
             const SizedBox(height: 5,),
-            const Text("2 Reviews", style: TextStyle(fontFamily: "Lato", fontWeight: FontWeight.w500, fontSize: 14),),
+             Text(
+              '${AppLocalization.of(context).getTranslatedValues("2_reviews")}',
+              style: TextStyle(fontFamily: "Lato", fontWeight: FontWeight.w500, fontSize: 14),),
             const SizedBox(height: 30,),
             SizedBox(
               width: MediaQuery.of(context).size.width,
@@ -119,8 +122,8 @@ class _ProductPageViewState extends State<ProductPageView> {
                       ),
                     ),
                     const SizedBox(height: 30,),
-                    const Text(
-                      "Availability",
+                    Text(
+                      '${AppLocalization.of(context).getTranslatedValues("availability")}',
                       style: TextStyle(
                         fontFamily: "Montserrat",
                         fontSize: 18,
@@ -137,8 +140,8 @@ class _ProductPageViewState extends State<ProductPageView> {
                           child: Row(
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: [
-                              const Text(
-                                "In Stock Online",
+                              Text(
+                                '${AppLocalization.of(context).getTranslatedValues("in_stock_online")}',
                                 style: TextStyle(
                                     fontFamily: "Lato",
                                     fontSize: 18,
@@ -171,8 +174,8 @@ class _ProductPageViewState extends State<ProductPageView> {
                           child: Row(
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: [
-                              const Text(
-                                "Buy Online, Pick Up in Store",
+                               Text(
+                                '${AppLocalization.of(context).getTranslatedValues("buy_online_pick_up_in_store")}',
                                 style: TextStyle(
                                     fontFamily: "Lato",
                                     fontSize: 18,
@@ -198,8 +201,8 @@ class _ProductPageViewState extends State<ProductPageView> {
                       ],
                     ),
                     const SizedBox(height: 30,),
-                    const Text(
-                      "Overview",
+                     Text(
+                      '${AppLocalization.of(context).getTranslatedValues("overview")}',
                       style: TextStyle(
                           fontFamily: "Montserrat",
                           fontSize: 18,
@@ -217,8 +220,8 @@ class _ProductPageViewState extends State<ProductPageView> {
                       ),
                     ),
                     const SizedBox(height: 30,),
-                    const Text(
-                      "Product Details",
+                     Text(
+                      '${AppLocalization.of(context).getTranslatedValues("product_details")}',
                       style: TextStyle(
                           fontFamily: "Montserrat",
                           fontSize: 18,
@@ -255,9 +258,9 @@ class _ProductPageViewState extends State<ProductPageView> {
                         const SizedBox(height: 5,),
                         Row(
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                          children: const [
+                          children: [
                             Text(
-                              "Publisher:",
+                              '${AppLocalization.of(context).getTranslatedValues("publisher")}',
                               style: TextStyle(
                                 fontFamily: "Lato",
                                 fontSize: 16,
@@ -279,9 +282,9 @@ class _ProductPageViewState extends State<ProductPageView> {
                         const SizedBox(height: 5,),
                         Row(
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                          children: const [
+                          children:  [
                             Text(
-                              "Publication Date:",
+                              '${AppLocalization.of(context).getTranslatedValues("publication_date")}',
                               style: TextStyle(
                                 fontFamily: "Lato",
                                 fontSize: 16,
@@ -303,9 +306,9 @@ class _ProductPageViewState extends State<ProductPageView> {
                         const SizedBox(height: 5,),
                         Row(
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                          children: const [
+                          children:  [
                             Text(
-                              "Pages:",
+                              '${AppLocalization.of(context).getTranslatedValues("pages")}',
                               style: TextStyle(
                                 fontFamily: "Lato",
                                 fontSize: 16,
@@ -327,9 +330,9 @@ class _ProductPageViewState extends State<ProductPageView> {
                         const SizedBox(height: 5,),
                         Row(
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                          children: const [
+                          children:  [
                             Text(
-                              "Sales rank:",
+                              '${AppLocalization.of(context).getTranslatedValues("sales_rank")}',
                               style: TextStyle(
                                   fontFamily: "Lato",
                                   fontSize: 16,
@@ -351,9 +354,9 @@ class _ProductPageViewState extends State<ProductPageView> {
                         const SizedBox(height: 5,),
                         Row(
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                          children: const [
+                          children:  [
                             Text(
-                              "Product dimensions:",
+                              '${AppLocalization.of(context).getTranslatedValues("product_dimensions")}',
                               style: TextStyle(
                                   fontFamily: "Lato",
                                   fontSize: 16,
@@ -375,9 +378,9 @@ class _ProductPageViewState extends State<ProductPageView> {
                         const SizedBox(height: 5,),
                         Row(
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                          children: const [
+                          children:  [
                             Text(
-                              "Language:",
+                              '${AppLocalization.of(context).getTranslatedValues("language")}',
                               style: TextStyle(
                                   fontFamily: "Lato",
                                   fontSize: 16,
@@ -436,8 +439,8 @@ class _ProductPageViewState extends State<ProductPageView> {
                         ),
                         elevation: 0,
                         primary: Colors.transparent),
-                    child: const Text(
-                      "ADD TO CART",
+                    child:  Text(
+                      '${AppLocalization.of(context).getTranslatedValues("add_to_cart")}',
                       style: TextStyle(
                           fontFamily: 'Montserrat',
                           fontWeight: FontWeight.w500,
