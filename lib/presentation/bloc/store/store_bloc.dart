@@ -1,5 +1,6 @@
 import 'dart:async';
 
+import 'package:binderbee/domain/models/book.dart';
 import 'package:binderbee/domain/repositories/book_repository.dart';
 import 'package:binderbee/presentation/bloc/store/store_event.dart';
 import 'package:binderbee/presentation/bloc/store/store_state.dart';

@@ -1,4 +1,6 @@
+import 'package:binderbee/domain/models/book.dart';
 import 'package:binderbee/presentation/pages/main_page.dart';
+import 'package:binderbee/presentation/pages/product_page.dart';
 import 'package:binderbee/presentation/screens/account_screen.dart';
 import 'package:binderbee/presentation/screens/cart_screen.dart';
 import 'package:binderbee/presentation/screens/category_screen.dart';
@@ -10,10 +12,11 @@ class NavbarProvider with ChangeNotifier{
     NavbarDTO(label: "", widget: HomeScreen(), iconData: Icons.home_filled),
     NavbarDTO(label: "", widget: const CategoryScreen(), iconData: Icons.category_rounded),
     NavbarDTO(label: "", widget: const CartScreen(), iconData: Icons.shopping_cart),
-    NavbarDTO(label: "", widget: const AccountScreen(), iconData: Icons.person_2_rounded),
+    NavbarDTO(label: "", widget: AccountScreen(), iconData: Icons.person_2_rounded),
   ];
 
   int _selectedIndex = 0;
+  Book _book = const Book(title: '', image: '', authorName: '');
 
   int get selectedIndex => _selectedIndex;
 
@@ -22,6 +25,12 @@ class NavbarProvider with ChangeNotifier{
     notifyListeners();
   }
 
+  Book get book => _book;
+
+  set book(Book value) {
+    _book = value;
+    notifyListeners();
+  }
 
 }
 

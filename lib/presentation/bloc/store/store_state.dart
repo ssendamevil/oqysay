@@ -21,11 +21,11 @@ class StoreState {
   StoreState copyWith({
     List<Book>? books,
     StoreRequest? booksStatus,
-    String? failureMessage
+    String? failureMessage,
   }) => StoreState(
           books: books ?? this.books,
           booksStatus: booksStatus ?? this.booksStatus,
-          failureMessage: failureMessage
+          failureMessage: failureMessage,
         );
 
 }

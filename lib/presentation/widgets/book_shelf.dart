@@ -16,7 +16,7 @@ class BookShelf extends StatelessWidget {
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              Text(
+              const Text(
                 "100 Top Bestsellers",
                 style: TextStyle(
                   fontSize: 17,
@@ -27,7 +27,7 @@ class BookShelf extends StatelessWidget {
               TextButton(
                 onPressed: (){},
                 child: Row(
-                  children: [
+                  children: const [
                     Text(
                       "see all",
                       style: TextStyle(
@@ -46,14 +46,14 @@ class BookShelf extends StatelessWidget {
             ],
           ),
           SizedBox(
-            height: 230,
+            height: 350,
             child: ListView.separated(
               scrollDirection: Axis.horizontal,
               itemBuilder: (context, int index) {
-                return BookShelfItem(image: books[index].image, title: books[index].title,);
+                return BookShelfItem(book: books[index]);
               },
               separatorBuilder: (BuildContext context, int index) {
-                return const SizedBox(width: 30,);
+                return const SizedBox(width: 10,);
               },
               itemCount: books.length,
             ),

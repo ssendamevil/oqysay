@@ -50,6 +50,11 @@ dependencies:
   carousel_slider: ^4.2.1
   shimmer_animation: ^2.1.0+1
   cached_network_image: ^3.2.3
+  page_transition: ^2.0.9
+  animated_splash_screen: ^1.3.0
+  flutter_styled_toast: ^2.1.3
+  flutter_localizations:
+    sdk: flutter
 
 dev_dependencies:
   flutter_test:
@@ -77,6 +82,9 @@ flutter:
   assets:
     - assets/images/
     - assets/logo/
+    - assets/languages/en_US.json
+    - assets/languages/kz_KZ.json
+    - assets/languages/ru_RU.json
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
 
@@ -89,6 +97,16 @@ flutter:
   # list giving the asset and other descriptors for the font. For
   # example:
   fonts:
+    - family: Inter
+      fonts:
+        - asset: assets/fonts/Inter/Inter-SemiBold.ttf
+          weight: 600
+        - asset: assets/fonts/Inter/Inter-Regular.ttf
+          weight: 500
+        - asset: assets/fonts/Inter/Inter-Medium.ttf
+          weight: 400
+        - asset: assets/fonts/Inter/Inter-Light.ttf
+          weight: 300
     - family: Montserrat
       fonts:
         - asset: assets/fonts/Montserrat/Montserrat-Regular.ttf
@@ -99,6 +117,12 @@ flutter:
           weight: 600
         - asset: assets/fonts/Montserrat/Montserrat-Bold.ttf
           weight: 700
+    - family: Lato
+      fonts:
+      - asset: assets/fonts/Lato/Lato-Light.ttf
+        weight: 300
+      - asset: assets/fonts/Lato/Lato-Regular.ttf
+        weight: 500
     - family: SFProDisplay
       fonts:
         - asset: assets/fonts/SFPRODISPLAYREGULAR.OTF

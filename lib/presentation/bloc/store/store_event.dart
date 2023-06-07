@@ -1,3 +1,5 @@
+import '../../../domain/models/book.dart';
+
 abstract class StoreEvent {
   const StoreEvent();
 }

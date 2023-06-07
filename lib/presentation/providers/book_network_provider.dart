@@ -8,7 +8,7 @@ class BookNetworkProvider {
   BookNetworkProvider(this._dio);
 
   Future<List<Book>> getAllBooks() async{
-    var response = await _dio.get('api/books/');
+    var response = await _dio.get('/api/books/');
     return _parseBook(response.data);
   }
 
