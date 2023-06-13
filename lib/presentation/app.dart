@@ -1,8 +1,8 @@
 import 'package:animated_splash_screen/animated_splash_screen.dart';
+import 'package:binderbee/data/datasources/entities/settings_entity.dart';
 import 'package:binderbee/data/repositories/data_auth_repository.dart';
 import 'package:binderbee/domain/repositories/auth_repository.dart';
 import 'package:binderbee/domain/repositories/book_repository.dart';
-import 'package:binderbee/presentation/bloc/language/language_bloc.dart';
 import 'package:binderbee/presentation/language_selection/app_localization.dart';
 import 'package:binderbee/presentation/pages/login_page.dart';
 import 'package:binderbee/presentation/pages/main_page.dart';
@@ -12,12 +12,13 @@ import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:provider/provider.dart';
-import 'package:flutter_localizations/flutter_localizations.dart';
+import 'dart:io';
 
 import '../data/datasources/box_helper.dart';
 import '../data/repositories/data_book_repository.dart';
 import 'bloc/auth/auth_bloc.dart';
 import 'bloc/cart/cart_bloc.dart';
+import 'bloc/settings/settings_bloc.dart';
 import 'bloc/store/store_bloc.dart';
 import 'bloc/store/store_event.dart';
 
@@ -49,8 +50,8 @@ class App extends StatelessWidget {
           BlocProvider<AuthBloc>(
             create: (context) => AuthBloc(context.read<AuthRepository>()),
           ),
-          BlocProvider<LanguageBloc>(
-            create: (context) => LanguageBloc(),
+          BlocProvider<SettingsBloc>(
+            create: (context) => SettingsBloc(),
           ),
         ],
         child: const AppView(),
@@ -68,21 +69,36 @@ class AppView extends StatefulWidget {
 
 class _AppViewState extends State<AppView> {
   late StoreBloc _storeBloc;
+  late SettingsBloc _settingsBloc;
+  final String defaultLocale = Platform.localeName;
+  int isLangChangedOnce = 0;
 
   @override
   void initState() {
     super.initState();
     _storeBloc = context.read<StoreBloc>()
       ..add(StoreGetAllBooksEvent());
+    if(!BoxHelper.getSettings()!.isLangChangedOnce){
+      var window = WidgetsBinding.instance!.window;
+      window.onLocaleChanged = () {
+        WidgetsBinding.instance?.handleLocaleChanged();
+        var locale = window.locale;
+        _settingsBloc = context.read<SettingsBloc>()
+          ..add(ChangeLanguageEvent(locale: locale));
+      };
+      BoxHelper.saveSettings(SettingsEntity(defaultLocale.substring(0, 2),
+          'light', false, defaultLocale.substring(3, 5), false));
+    }
   }
 
   @override
   Widget build(BuildContext context) {
-    return BlocBuilder<LanguageBloc, LanguageState>(
+    return BlocBuilder<SettingsBloc, SettingsState>(
       builder: (context, state) {
         return ChangeNotifierProvider<NavbarProvider>(
           create: (_) => NavbarProvider(),
           child: MaterialApp(
+            locale: Locale('${BoxHelper.getSettings()?.language}','${BoxHelper.getSettings()?.countryCode}'),
             localizationsDelegates: AppLocalization.localizationsDelegate,
             supportedLocales: AppLocalization.supportedLocales,
             localeResolutionCallback: AppLocalization.localeResolutionCallBack,

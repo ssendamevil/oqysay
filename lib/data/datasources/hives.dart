@@ -8,6 +8,7 @@ class Hives{
 
   // keys
   static const String keyIsLoggedIn = 'isLoggedIn';
+  static const String keySettings = 'appSettings';
   static const String keyToken = 'token';
   static const String keyMyUser = 'myUser';
   static const String keyUserId = 'userId';

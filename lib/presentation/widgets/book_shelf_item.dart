@@ -1,9 +1,6 @@
 import 'package:binderbee/presentation/bloc/cart/cart_bloc.dart';
 import 'package:binderbee/presentation/bloc/cart/cart_event.dart';
-import 'package:binderbee/presentation/bloc/store/store_event.dart';
-import 'package:binderbee/presentation/pages/product_page.dart';
 import 'package:flutter/material.dart';
-import 'package:shimmer_animation/shimmer_animation.dart';
 import 'package:provider/provider.dart';
 import '../../domain/models/book.dart';
 import '../providers/navbar_provider.dart';

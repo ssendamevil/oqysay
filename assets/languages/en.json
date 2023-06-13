@@ -22,7 +22,7 @@
   "product_dimensions": "Product Dimensions:",
   "language": "Language:",
   "add_to_cart": "ADD TO CART",
-  "2_reviews": "2 Reviews",
+  "num_reviews": "2 Reviews",
   "categories": "Categories",
   "cart": "Cart",
   "no_items": "No items",
@@ -35,9 +35,8 @@
   "notifications": "Notifications",
   "settings": "Settings",
   "logout": "Logout",
-  "switch_to_russian": "Switch to Russian",
-  "switch_to_kazakh": "Switch to Kazakh",
-  "switch_to_english": "Switch to English"
-
-
+  "lang_to_russian": "Switch to Russian",
+  "lang_to_kazakh": "Switch to Kazakh",
+  "lang_to_english": "Switch to English",
+  "app_thememode":"Theme Mode"
 }

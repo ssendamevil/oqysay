@@ -3,6 +3,7 @@ import 'package:binderbee/data/datasources/entities/user_entity.dart';
 import 'package:dio/dio.dart';
 import 'package:hive_flutter/hive_flutter.dart';
 import 'package:fresh_dio/fresh_dio.dart';
+import '../data/datasources/entities/settings_entity.dart';
 import '../data/datasources/hives.dart';
 
 class AppInitializer{
@@ -12,7 +13,8 @@ class AppInitializer{
     await Hive.initFlutter();
     Hive.registerAdapter(TokenEntityAdapter());
     Hive.registerAdapter(UserEntityAdapter());
-    await Hive.openBox(Hives.boxSettings);
+    Hive.registerAdapter(SettingsEntityAdapter());
+    await Hive.openBox<SettingsEntity>(Hives.boxSettings);
     await Hive.openBox<TokenEntity>(Hives.boxToken);
     await Hive.openBox<UserEntity>(Hives.boxUsers);
 

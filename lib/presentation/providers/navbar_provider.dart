@@ -12,11 +12,13 @@ class NavbarProvider with ChangeNotifier{
     NavbarDTO(label: "", widget: HomeScreen(), iconData: Icons.home_filled),
     NavbarDTO(label: "", widget: const CategoryScreen(), iconData: Icons.category_rounded),
     NavbarDTO(label: "", widget: const CartScreen(), iconData: Icons.shopping_cart),
-    NavbarDTO(label: "", widget: AccountScreen(), iconData: Icons.person_2_rounded),
+    NavbarDTO(label: "", widget: const AccountScreen(), iconData: Icons.person_2_rounded),
   ];
 
   int _selectedIndex = 0;
   Book _book = const Book(title: '', image: '', authorName: '');
+  String category = '';
+  List<Book> bookByCategory = [];
 
   int get selectedIndex => _selectedIndex;
 
@@ -35,9 +37,9 @@ class NavbarProvider with ChangeNotifier{
 }
 
 class NavbarDTO{
-  Widget? widget;
+  Widget widget;
   String? label;
   IconData? iconData;
 
-  NavbarDTO({this.widget, this.label, this.iconData});
+  NavbarDTO({required this.widget, this.label, this.iconData});
 }

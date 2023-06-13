@@ -22,7 +22,7 @@
   "product_dimensions": "Размеры Продукта:",
   "language": "Язык:",
   "add_to_cart": "ДОБАВИТЬ В КОРЗИНУ",
-  "2_reviews": "2 Отзыва",
+  "num_reviews": "2 Отзыва",
   "categories": "Категории",
   "cart": "Корзина",
   "no_items": "Товаров нет",
@@ -35,31 +35,8 @@
   "notifications": "Уведомления",
   "settings": "Настройки",
   "logout": "Выйти",
-  "switch_to_russian": "Перейти на Русский",
-  "switch_to_kazakh": "Перейти на Казахский",
-  "switch_to_english": "Перейти на Ангийский"
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+  "lang_to_russian": "Перейти на Русский",
+  "lang_to_kazakh": "Перейти на Казахский",
+  "lang_to_english": "Перейти на Ангийский",
+  "app_thememode": "Тема приложения"
 }

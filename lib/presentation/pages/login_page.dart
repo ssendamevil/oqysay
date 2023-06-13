@@ -241,7 +241,8 @@ class _LoginViewState extends State<LoginView> {
                           fontFamily: 'Montserrat',
                           fontWeight: FontWeight.w500,
                           fontSize: 16,
-                          color: Colors.white),
+                          color: Colors.white
+                      ),
                     ),
                   ),
                 ),

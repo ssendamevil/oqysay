@@ -1,6 +1,8 @@
 import 'package:binderbee/presentation/language_selection/app_localization.dart';
 import 'package:flutter/material.dart';
 
+import '../language_selection/app_localization.dart';
+
 
 class SearchAppbar extends StatelessWidget with PreferredSizeWidget {
   const SearchAppbar({Key? key}) : super(key: key);

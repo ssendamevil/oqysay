@@ -19,51 +19,51 @@ class CategoryScreen extends StatelessWidget {
               alignment: Alignment.centerLeft,
               child: Text(
                 '${AppLocalization.of(context).getTranslatedValues("categories")}',
-                style: TextStyle(
+                style: const TextStyle(
                   fontSize: 20,
                   fontFamily: "Montserrat",
                   fontWeight: FontWeight.w600
                 ),
               ),
             ),
-            SizedBox(height: 20,),
+            const SizedBox(height: 20,),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                CategoryItem(),
-                CategoryItem()
+                CategoryItem(category: "Fiction",),
+                CategoryItem(category: "Non-Fiction",)
               ],
             ),
             SizedBox(height: 20,),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                CategoryItem(),
-                CategoryItem()
+                CategoryItem(category: "Fantasy",),
+                CategoryItem(category: "Horror",)
               ],
             ),
             SizedBox(height: 20,),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                CategoryItem(),
-                CategoryItem()
+                CategoryItem(category: "Young Adult"),
+                CategoryItem(category: "Crime")
               ],
             ),
             SizedBox(height: 20,),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                CategoryItem(),
-                CategoryItem()
+                CategoryItem(category: "Sci-fi",),
+                CategoryItem(category: "Drama",)
               ],
             ),
             SizedBox(height: 20,),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                CategoryItem(),
-                CategoryItem()
+                CategoryItem(category: "Kids",),
+                CategoryItem(category: "CD",)
               ],
             ),
           ],

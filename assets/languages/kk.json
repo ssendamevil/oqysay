@@ -9,7 +9,7 @@
   "settings_language": "Тіл",
   "search_for_a_book": "Кітап іздеу...",
   "100_top_bestsellers": "100 Топ Бестселлерлер",
-  "see_all": "арлығын көру",
+  "see_all": "барлығын көру",
   "availability": "Қолжетімділік",
   "in_stock_online": "Онлайн қоймада",
   "buy_online_pick_up_in_store": "Онлайн сатып алу, Дүкеннен алу",
@@ -20,10 +20,10 @@
   "pages": "Сату Рейтингі:",
   "product_dimensions": "Өнімнің өлшемдері:",
   "language": "Тіл:",
-  "add_to_cart": "КОРЗИНАҒА САЛУ",
-  "2_reviews": "2 Шолу",
+  "add_to_cart": "СЕБЕТКЕ САЛУ",
+  "num_reviews": "2 Шолу",
   "categories": "Категориялар",
-  "cart": "Корзина",
+  "cart": "Себет",
   "no_items": "Тауарлар жоқ",
   "there_is_no_products": "Корзинада тауарлар жоқ!",
   "edit_profile": "Профильді өзгерту",
@@ -32,23 +32,10 @@
   "my_reviews": "Менің Пікірлерім",
   "shipping_address": "Жеткізу Мекенжайы",
   "notifications": "Хабарламалар",
-  "settings": "Настройкалар",
+  "settings": "Баптаулар",
   "logout": "Шығу",
-  "switch_to_russian": "Орысша тілге ауысу",
-  "switch_to_kazakh": "Қазақша тілге ауысу",
-  "switch_to_english": "Ағылшынша тілге ауысу"
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+  "lang_to_russian": "Орысша тілге ауысу",
+  "lang_to_kazakh": "Қазақша тілге ауысу",
+  "lang_to_english": "Ағылшынша тілге ауысу",
+  "app_thememode": "Қосымша темасы"
 }

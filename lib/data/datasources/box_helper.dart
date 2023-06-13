@@ -1,3 +1,4 @@
+import 'package:binderbee/data/datasources/entities/settings_entity.dart';
 import 'package:binderbee/data/datasources/entities/user_entity.dart';
 import 'package:hive_flutter/hive_flutter.dart';
 
@@ -12,6 +13,14 @@ class BoxHelper{
 
   static bool isLoggedIn(){
     return Hive.box(Hives.boxSettings).get(Hives.keyIsLoggedIn);
+  }
+
+  static void saveSettings(SettingsEntity settings){
+    Hive.box<SettingsEntity>(Hives.boxSettings).put(Hives.keySettings, settings);
+  }
+
+  static SettingsEntity? getSettings(){
+    return Hive.box<SettingsEntity>(Hives.boxSettings).get(Hives.keySettings);
   }
 
   static void saveToken(TokenEntity token){

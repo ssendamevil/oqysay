@@ -1,7 +1,11 @@
+import 'package:binderbee/presentation/pages/category_page.dart';
+import 'package:binderbee/presentation/pages/category_spe_page.dart';
 import 'package:binderbee/presentation/pages/product_page.dart';
 import 'package:binderbee/presentation/providers/navbar_provider.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
+
+import '../../domain/models/book.dart';
 
 class MainPage extends StatelessWidget {
   const MainPage({Key? key}) : super(key: key);
@@ -21,13 +25,59 @@ class MainViewPage extends StatefulWidget {
 
 class _MainViewPageState extends State<MainViewPage> {
 
+  int _switchNavigation(int si){
+    switch(si){
+      case 5 : {
+        return 0;
+      }
+      case 6 : {
+        return 1;
+      }
+      case 7: {
+        return 1;
+      }
+    }
+
+    return si;
+  }
+
+  // Widget _switchPages(int si, Book book, List<NavbarDTO> items){
+  //   switch(si){
+  //     case 5 : {
+  //       return ProductPage(book: book);
+  //     }
+  //     case 6 : {
+  //       return const CategoryPage();
+  //     }
+  //   }
+  //
+  //   return items[si].widget;
+  // }
+
   @override
   Widget build(BuildContext context) {
     final nb = Provider.of<NavbarProvider>(context);
+
+    Widget switchPages(int si){
+      switch(si){
+        case 5 : {
+          return ProductPage(book: nb.book);
+        }
+        case 6 : {
+          return CategoryPage(categoryName: nb.category,);
+        }
+        case 7: {
+          return CategorySpePage(categoryName: nb.category,books: nb.bookByCategory,);
+        }
+      }
+
+      return nb.items[si].widget;
+    }
+
     return Scaffold(
-        body: nb.selectedIndex == 5 ? ProductPage(book: nb.book) : nb.items[nb.selectedIndex].widget,
+        body: switchPages(nb.selectedIndex),
         bottomNavigationBar: NavigationBar(
-            selectedIndex: nb.selectedIndex == 5 ? 0 : nb.selectedIndex,
+            selectedIndex: _switchNavigation(nb.selectedIndex),
             onDestinationSelected: (i) {
               nb.selectedIndex = i;
             },
