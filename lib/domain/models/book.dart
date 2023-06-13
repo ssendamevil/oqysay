@@ -9,4 +9,5 @@ class Book {
   final String title;
   final String image;
   final String authorName;
+
 }

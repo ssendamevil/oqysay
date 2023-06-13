@@ -60,6 +60,7 @@ class HomeScreen extends StatelessWidget {
               children: [
                 CarouselSliderLoaded(carouselList: images),
                 BookShelf(books: state.books),
+                const SizedBox(height: 30,),
                 BookShelf(books: state.books),
               ],
             ),

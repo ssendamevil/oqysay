@@ -84,7 +84,7 @@ class CartScreen extends StatelessWidget {
               )
           ),
           bottomNavigationBar: BottomAppBar(
-            height: MediaQuery.of(context).size.height*0.3,
+            height: MediaQuery.of(context).size.height*0.35,
             child: Container(
               decoration: BoxDecoration(
                 border: Border(top: BorderSide(width: 1, color: Color(0xFFB8B8B8)),)
@@ -103,15 +103,15 @@ class CartScreen extends StatelessWidget {
                             "Subtotal(items)",
                             style: TextStyle(
                                 fontFamily: "Lato",
-                                fontSize: 18,
+                                fontSize: 16,
                                 color: Color(0xFF3F3E3E)
                             ),
                           ),
                           Text(
-                            '7.990T',
+                            '7.990₸',
                             style: TextStyle(
                                 fontFamily: "Lato",
-                                fontSize: 18,
+                                fontSize: 16,
                                 color: Color(0xFF3F3E3E)
                             ),
                           )
@@ -127,7 +127,7 @@ class CartScreen extends StatelessWidget {
                             "Estimated Shipping",
                             style: TextStyle(
                               fontFamily: "Lato",
-                              fontSize: 18,
+                              fontSize: 16,
                               color: Color(0xFF3F3E3E)
                             ),
                           ),
@@ -135,7 +135,7 @@ class CartScreen extends StatelessWidget {
                             "Free",
                             style: TextStyle(
                                 fontFamily: "Lato",
-                                fontSize: 18,
+                                fontSize: 16,
                                 color: Color(0xFF3F3E3E)
                             ),
                           )
@@ -151,15 +151,15 @@ class CartScreen extends StatelessWidget {
                             "Estimated Tax",
                             style: TextStyle(
                                 fontFamily: "Lato",
-                                fontSize: 18,
+                                fontSize: 16,
                                 color: Color(0xFF3F3E3E)
                             ),
                           ),
                           Text(
-                            "0,00T",
+                            "0,00₸",
                             style: TextStyle(
                                 fontFamily: "Lato",
-                                fontSize: 17,
+                                fontSize: 16,
                                 color: Color(0xFF3F3E3E)
                             ),
                           )
@@ -184,15 +184,15 @@ class CartScreen extends StatelessWidget {
                             "Order Total",
                             style: TextStyle(
                                 fontFamily: "Lato",
-                                fontSize: 17,
+                                fontSize: 16,
                                 fontWeight: FontWeight.w700
                             ),
                           ),
                           Text(
-                            "7,900T",
+                            "7,900₸",
                             style: TextStyle(
                                 fontFamily: "Lato",
-                                fontSize: 17,
+                                fontSize: 16,
                                 fontWeight: FontWeight.w700
                             ),
                           )
@@ -225,7 +225,7 @@ class CartScreen extends StatelessWidget {
                           ),
                         ),
                         style: ElevatedButton.styleFrom(
-                          backgroundColor: Color(0xFF223263),
+                          backgroundColor: const Color(0xFF223263),
                           shape: RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(12.0),
                           )

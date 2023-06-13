@@ -17,7 +17,7 @@ class _CategoryItemState extends State<CategoryItem> {
   Widget build(BuildContext context) {
     final nb = Provider.of<NavbarProvider>(context);
     return Container(
-      width: 155,
+      width: MediaQuery.of(context).size.width*0.37,
       height: 90,
       decoration: const BoxDecoration(
         color: Colors.transparent,

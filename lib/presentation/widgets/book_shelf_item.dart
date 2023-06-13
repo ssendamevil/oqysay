@@ -39,7 +39,7 @@ class _BookShelfItemState extends State<BookShelfItem> {
               width: 125,
               height: 180,
               child: ClipRRect(
-                borderRadius: const BorderRadius.all(Radius.circular(0)),
+                borderRadius: const BorderRadius.all(Radius.circular(12)),
                   child: Image.network(widget.book.image, fit: BoxFit.fill,)
               ),
             ),
@@ -51,6 +51,8 @@ class _BookShelfItemState extends State<BookShelfItem> {
                 fontWeight: FontWeight.w600,
                 fontSize: 16
               ),
+              overflow: TextOverflow.ellipsis,
+              maxLines: 3,
             ),
             const SizedBox(height: 5,),
             const Text(
@@ -63,45 +65,48 @@ class _BookShelfItemState extends State<BookShelfItem> {
               ),
             ),
             const SizedBox(height: 5,),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              crossAxisAlignment: CrossAxisAlignment.end,
-              children: [
-                const Text(
-                  "2400₸",
-                  style: TextStyle(
-                    fontFamily: 'Montserrat',
-                    fontSize: 18,
-                    fontWeight: FontWeight.w700,
-                    color: Colors.black
-                  ),
-                ),
-                Container(
-                  width: 30,
-                  height: 30,
-                  decoration: BoxDecoration(
-                    border: Border.all(width: 1),
-                    borderRadius: BorderRadius.circular(50)
-                  ),
-                  child: IconButton(
-                    focusColor: Colors.black,
-                    padding: const EdgeInsets.all(5),
-                    onPressed: () {
-                      _addToCart(widget.book);
-                      setState(() {
-                        isSelected = !isSelected;
-                      });
-                    },
-                    icon: const Icon(
-                      Icons.favorite_border_sharp,
-                      size: 18,
-                      color: Colors.black,
+            Expanded(
+              flex: 1,
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                crossAxisAlignment: CrossAxisAlignment.end,
+                children: [
+                  const Text(
+                    "2400₸",
+                    style: TextStyle(
+                      fontFamily: 'Montserrat',
+                      fontSize: 18,
+                      fontWeight: FontWeight.w700,
+                      color: Colors.black
                     ),
-                    selectedIcon: const Icon(Icons.favorite, color: Colors.black,),
-                    isSelected: isSelected,
                   ),
-                ),
-              ],
+                  Container(
+                    width: 30,
+                    height: 30,
+                    decoration: BoxDecoration(
+                      border: Border.all(width: 1),
+                      borderRadius: BorderRadius.circular(50)
+                    ),
+                    child: IconButton(
+                      focusColor: Colors.black,
+                      padding: const EdgeInsets.all(5),
+                      onPressed: () {
+                        // _addToCart(widget.book);
+                        setState(() {
+                          isSelected = !isSelected;
+                        });
+                      },
+                      icon: const Icon(
+                        Icons.favorite_border_sharp,
+                        size: 18,
+                        color: Colors.black,
+                      ),
+                      selectedIcon: const Icon(Icons.favorite,size: 18, color: Colors.black,),
+                      isSelected: isSelected,
+                    ),
+                  ),
+                ],
+              ),
             ),
           ],
         ),

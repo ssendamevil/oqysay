@@ -225,7 +225,6 @@ class _CategorySpePageState extends State<CategorySpePage> {
           ),
         ),
       ),
-
     );
   }
 }

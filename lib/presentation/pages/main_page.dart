@@ -77,13 +77,14 @@ class _MainViewPageState extends State<MainViewPage> {
     return Scaffold(
         body: switchPages(nb.selectedIndex),
         bottomNavigationBar: NavigationBar(
-            selectedIndex: _switchNavigation(nb.selectedIndex),
-            onDestinationSelected: (i) {
-              nb.selectedIndex = i;
-            },
-            destinations: nb.items.map((e) =>
-                NavigationDestination(icon: Icon(e.iconData), label: ""))
-                .toList()
+          selectedIndex: _switchNavigation(nb.selectedIndex),
+          onDestinationSelected: (i) {
+            nb.selectedIndex = i;
+          },
+          destinations: nb.items.map((e) =>
+              NavigationDestination(icon: Icon(e.iconData), label: ""))
+              .toList(),
+          height: 50,
         )
     );
   }

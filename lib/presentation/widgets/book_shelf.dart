@@ -57,7 +57,7 @@ class _BookShelfState extends State<BookShelf> {
             ],
           ),
           SizedBox(
-            height: 350,
+            height: 310,
             child: ListView.separated(
               scrollDirection: Axis.horizontal,
               itemBuilder: (context, int index) {

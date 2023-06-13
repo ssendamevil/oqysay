@@ -78,7 +78,7 @@ class _AppViewState extends State<AppView> {
     super.initState();
     _storeBloc = context.read<StoreBloc>()
       ..add(StoreGetAllBooksEvent());
-    if(!BoxHelper.getSettings()!.isLangChangedOnce){
+    // if(!BoxHelper.getSettings()!.isLangChangedOnce){
       var window = WidgetsBinding.instance!.window;
       window.onLocaleChanged = () {
         WidgetsBinding.instance?.handleLocaleChanged();
@@ -88,7 +88,7 @@ class _AppViewState extends State<AppView> {
       };
       BoxHelper.saveSettings(SettingsEntity(defaultLocale.substring(0, 2),
           'light', false, defaultLocale.substring(3, 5), false));
-    }
+
   }
 
   @override
@@ -119,7 +119,7 @@ class _AppViewState extends State<AppView> {
             darkTheme: ThemeData(
               brightness: Brightness.dark
             ),
-            themeMode: ThemeMode.light,
+            themeMode: BoxHelper.getSettings()?.theme == 'light'? ThemeMode.light : ThemeMode.dark,
           ),
         );
       },

@@ -174,14 +174,18 @@ class _ProductPageViewState extends State<ProductPageView> {
                           child: Row(
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: [
-                               Text(
-                                '${AppLocalization.of(context).getTranslatedValues("buy_online_pick_up_in_store")}',
-                                style: TextStyle(
-                                    fontFamily: "Lato",
-                                    fontSize: 18,
-                                    fontWeight: FontWeight.w500
-                                ),
+                               Expanded(
+                                 flex: 1,
+                                 child: Text(
+                                  '${AppLocalization.of(context).getTranslatedValues("buy_online_pick_up_in_store")}',
+                                  style: const TextStyle(
+                                      fontFamily: "Lato",
+                                      fontSize: 18,
+                                      fontWeight: FontWeight.w500
+                                  ),
+                                   overflow: TextOverflow.ellipsis,
                               ),
+                               ),
                               Transform.scale(
                                 scale: 1.2,
                                 child: Radio<String>(

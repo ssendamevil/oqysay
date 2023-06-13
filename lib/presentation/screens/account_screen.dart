@@ -266,16 +266,23 @@ class AccountScreen extends StatelessWidget {
                     children: [
                       Icon(Icons.all_inbox),
                       SizedBox(width: 50,),
-                      Text(
-                        '${AppLocalization.of(context).getTranslatedValues("settings")}',
-                        style: const TextStyle(
-                            fontFamily: "Montserrat",
-                            fontSize: 18,
-                            fontWeight: FontWeight.w500
+                      Expanded(
+                        flex: 1,
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            Text(
+                              '${AppLocalization.of(context).getTranslatedValues("settings")}',
+                              style: const TextStyle(
+                                  fontFamily: "Montserrat",
+                                  fontSize: 18,
+                                  fontWeight: FontWeight.w500
+                              ),
+                            ),
+                            Icon(Icons.arrow_forward_ios)
+                          ],
                         ),
-                      ),
-                      SizedBox(width: 165,),
-                      Icon(Icons.arrow_forward_ios)
+                      )
                     ],
                   ),
                 ),
